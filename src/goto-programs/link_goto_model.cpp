@@ -99,6 +99,7 @@ static bool link_functions(
         in_dest_symbol_table.parameter_identifiers.swap(
           src_func.parameter_identifiers);
         in_dest_symbol_table.type=src_func.type;
+        in_dest_symbol_table.parameter_identifiers = src_func.parameter_identifiers;
       }
       else if(src_func.body.instructions.empty() ||
               src_ns.lookup(src_it->first).is_weak)
